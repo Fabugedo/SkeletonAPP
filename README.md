@@ -15,4 +15,4 @@ Primera formativa-
 - Generar un login basico con ionic CLI
 - Ejecutar en navegador
 - Subir a GitHub
-- se mostraron mensajes basicos en consola "usuario-->" o "contraseña-->"
+- Se mostraron mensajes basicos en consola "usuario-->" o "contraseña-->"
