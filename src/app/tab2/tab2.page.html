@@ -44,7 +44,10 @@
     </ion-item>
 
   </ion-list>
-  <ion-button expand="full" type="submit" color="tertiary">Capturar Data</ion-button>
+  <ion-button expand="full" type="submit" color="tertiary"
+              [disabled]="!usuario || !nombre || !apellido">
+    Capturar Data
+  </ion-button>
 </form>
 
 
