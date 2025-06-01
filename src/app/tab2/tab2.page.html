@@ -1,17 +1,54 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Registro
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content  [fullscreen]="true" class="ion-padding">
+<form (ngSubmit)="capturarDatos()" #formulario="ngForm">
+  <ion-list>
+    <ion-item>
+      <ion-input
+        label="Usuario"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Ingrese su usuario"
+        [(ngModel)]="usuario"
+        name="usuario"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        label="Nombre"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Ingrese su nombre"
+        [(ngModel)]="nombre"
+        name="nombre"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        label="Apellido"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Ingrese su apellido"
+        [(ngModel)]="apellido"
+        name="apellido"
+        required
+      ></ion-input>
+    </ion-item>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  </ion-list>
+  <ion-button expand="full" type="submit" color="tertiary">Capturar Data</ion-button>
+</form>
+
+
+
+
+
 </ion-content>
