@@ -62,6 +62,9 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
+    <div *ngIf="cargando" class="spinner-overlay">
+      <div class="spinner-dual-ring"></div>
+    </div>
 
     <ion-button expand="block" color="medium" (click)="limpiarCampos()">Limpiar</ion-button>
     <ion-button expand="block" color="primary" type="submit">Mostrar</ion-button>

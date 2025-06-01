@@ -14,6 +14,8 @@ export class Tab2Page {
   nivel: string = '';
   fechaNacimiento: string = '';
 
+  cargando: boolean = false; //
+
   @ViewChild('nombreInput', { read: ElementRef }) nombreInput!: ElementRef;
   @ViewChild('apellidoInput', { read: ElementRef }) apellidoInput!: ElementRef;
 
@@ -30,19 +32,9 @@ export class Tab2Page {
     this.nivel = '';
     this.fechaNacimiento = '';
 
-    // Lanza animación
+    // Lanza animación a los campos
     this.animarElemento(this.nombreInput.nativeElement);
     this.animarElemento(this.apellidoInput.nativeElement);
-  }
-
-  animarElemento(elemento: HTMLElement) {
-    elemento.style.transition = 'transform 1s';
-    elemento.style.transform = 'translateX(100px)';
-
-    // Volver al lugar original después de la animación
-    setTimeout(() => {
-      elemento.style.transform = 'translateX(0)';
-    }, 1000);
   }
 
   mostrarDatos() {
@@ -51,6 +43,21 @@ export class Tab2Page {
       return;
     }
 
-    alert(`Su nombre es ${this.nombre} ${this.apellido}`);
+    this.cargando = true;
+
+    setTimeout(() => {
+      this.cargando = false;
+      alert(`Su nombre es ${this.nombre} ${this.apellido}`);
+    }, 1500);
+  }
+
+  animarElemento(elemento: HTMLElement) {
+    elemento.style.transition = 'transform 1s';
+    elemento.style.transform = 'translateX(100px)';
+
+
+    setTimeout(() => {
+      elemento.style.transform = 'translateX(0)';
+    }, 1000);
   }
 }
