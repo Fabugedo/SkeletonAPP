@@ -1,27 +1,35 @@
-# SkeletonAPP – Ionic + Angular (NgModule)
+# SkeletonAPP – Actividad Semana 2
 
-Este proyecto fue desarrollado como parte de la actividad **"Herramientas de desarrollo"** del curso **PGY4221 - Programación de Aplicaciones Móviles** en DUOC UC.
 
 ---
 
-## 🧱 Estructura del Proyecto
+## Tecnologías utilizadas
 
-- Framework: **Ionic con Angular**
-- Arquitectura: **NgModule**
-- Template inicial: **tabs**
-- IDE utilizado: **WebStorm**
+- Ionic 8 con Angular 19
+- Angular Material (`MatDatepicker`)
+- Componentes UI de Ionic
+- Animaciones simples con CSS y JavaScript
 
 ---
 
-## 📁 Contenido Principal
+## Funcionalidades implementadas
 
+### Pantalla de Login (Tab1)
+- Campos: usuario (entre 3 y 8 caracteres alfanuméricos) y contraseña (4 dígitos numéricos)
+- Validación de ambos campos antes de continuar
+- Al hacer clic en "Ingresar", se navega a la pantalla Home y se pasa el usuario
 
-### ✅ Página Captura (`Tab 2`)
-- Formulario con campos:
-  - Usuario
+### Pantalla Home / Información adicional (Tab2)
+- Muestra un mensaje con el nombre de usuario recibido
+- Formulario que incluye:
   - Nombre
   - Apellido
-- Botón **Capturar Data** muestra la información en consola.
+  - Nivel educacional (selector desplegable)
+  - Fecha de nacimiento (usando `MatDatepicker`)
+- Botón "Mostrar" que muestra nombre y apellido en un mensaje, con un efecto de carga tipo dual-ring
+- Botón "Limpiar" que borra todos los campos e incluye una animación de movimiento en los inputs de nombre y apellido
 
 ---
+
+
 
