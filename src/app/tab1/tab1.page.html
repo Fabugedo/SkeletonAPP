@@ -4,8 +4,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <form (ngSubmit)="iniciarSesion()" #formulario="ngForm">
+<ion-content class="ion-padding" [fullscreen]="true">
+
+  <div style="text-align: center; margin-top: 30px;">
+    <h1 style="margin: 0;">SkeletonAPP</h1>
+    <p style="margin: 0;">Aquí comienza todo</p>
+    <h2 style="margin-top: 20px;">¡Bienvenido!</h2>
+  </div>
+
+
+  <form (ngSubmit)="iniciarSesion()" style="margin-top: 30px;">
     <ion-list>
       <ion-item>
         <ion-input
@@ -21,10 +29,10 @@
 
       <ion-item>
         <ion-input
-          label="Contraseña"
+          label="Password"
           label-placement="floating"
           fill="outline"
-          placeholder="Ingrese su contraseña"
+          placeholder="****"
           [(ngModel)]="contrasena"
           name="contrasena"
           type="password"
@@ -33,10 +41,12 @@
       </ion-item>
     </ion-list>
 
-    <ion-button expand="full" type="submit" color="primary" [disabled]="!usuario || !contrasena">
+    <ion-button expand="full" type="submit" color="primary" style="margin-top: 20px;">
       Ingresar
-
-
     </ion-button>
+
+    <div style="text-align: center; margin-top: 10px;">
+      <a href="#">Crea tu cuenta gratis</a>
+    </div>
   </form>
 </ion-content>
